@@ -12,11 +12,14 @@ using TravelAccommodations.Models;
 using Microsoft.EntityFrameworkCore;
 using TravelAccommodations.IServices;
 using TravelAccommodations.Services;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Cors.Internal;
 
 namespace TravelAccommodations
 {
     public class Startup
     {
+        private static string ConnectionStrings;
         public Startup(IConfiguration configuration, IHostingEnvironment env)
         {
             var builder = new ConfigurationBuilder()
@@ -26,6 +29,7 @@ namespace TravelAccommodations
             .AddEnvironmentVariables();
 
             Configuration = builder.Build();
+            ConnectionStrings = Configuration.GetSection("ConnectionStrings").GetSection("DefaultConnection").Value;
             //Configuration = configuration;
         }
 
@@ -34,7 +38,7 @@ namespace TravelAccommodations
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<TravelAccommodationDBContext>(options => options.UseSqlServer(Configuration.GetSection("ConnectionStrings").GetSection("DefaultConnection").Value));
+            services.AddDbContext<TravelAccommodationDBContext>(options => options.UseSqlServer(ConnectionStrings));
             services.AddScoped<IServiceRepository, ServiceRepository>();
             services.AddScoped<IRoomTypeRepository, RoomTypeRepository>();
             services.AddScoped<IRoomRepository, RoomRepository>();
@@ -46,17 +50,33 @@ namespace TravelAccommodations
             services.AddScoped<ICommentGroupRepository, CommentGroupRepository>();
             services.AddScoped<IAccommodationCategoryRepository, AccommodationCategoryRepository>();
             services.AddScoped<IAccommodationRepository, AccommodationRepository>();
+
+            services.AddCors(options =>
+            {
+                options.AddPolicy("AllowAllOrigins",
+                    builder => builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader().AllowCredentials());
+            });
+
+            services.Configure<MvcOptions>(options =>
+            {
+                options.Filters.Add(new CorsAuthorizationFilterFactory("AllowAllOrigins"));
+            });
+
+            
             services.AddMvc();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
+             
+            app.UseCors("AllowAllOrigins");
+            app.UseStaticFiles();
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
             }
-
+            
             app.UseMvc();
         }
     }

@@ -1,4 +1,6 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Builder;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,8 +10,10 @@ namespace TravelAccommodations.Models
 {
     public class TravelAccommodationDBContext : DbContext
     {
-        public TravelAccommodationDBContext() : base() { }
-
+        public TravelAccommodationDBContext() { }
+        public TravelAccommodationDBContext(DbContextOptions<TravelAccommodationDBContext> options) : base(options)
+        {
+        }
         public DbSet<Accommodation> Accommodations { get; set; }
         public DbSet<AccommodationCategory> AccommodationCategories { get; set; }
         public DbSet<Customer> Customers { get; set; }
@@ -25,7 +29,15 @@ namespace TravelAccommodations.Models
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            
+            base.OnModelCreating(modelBuilder);
         }
+
+        public static void UpdateDatabase(IServiceProvider app)
+        {
+
+            var context = app.GetRequiredService<TravelAccommodationDBContext>();
+            context.Database.MigrateAsync();
+        }
+
     }
 }
