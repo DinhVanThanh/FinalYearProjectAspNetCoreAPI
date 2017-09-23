@@ -7,11 +7,10 @@ namespace TravelAccommodations.IServices
 {
     public interface ICRUDRepository<T>
     {
-        int Create(T newObject);
-        int Update(T updatedObject);
-        int Delete(int ObjectId);
-        ICollection<T> getAll();
-        T get(int ObjectId);
-        T get(string ObjectName);
+        Task<int> CreateAsync(T newObject);
+        Task<int> UpdateAsync(T updatedObject);
+        Task<int> DeleteAsync(int ObjectId);
+        Task<ICollection<T>> getAllAsync();
+        Task<T> getAsync(int ObjectId); 
     }
 }

@@ -10,17 +10,22 @@ namespace TravelAccommodations.Models
     {
         public TravelAccommodationDBContext() : base() { }
 
-        DbSet<Accommodation> Accommodations { get; set; }
-        DbSet<AccommodationCategory> AccommodationCategories { get; set; }
-        DbSet<Customer> Customers { get; set; }
-        DbSet<Comment> Comments { get; set; }
-        DbSet<CommentGroup> CommentGroups { get; set; }
-        DbSet<Convenience> Conveniences { get; set; }
-        DbSet<Image> Images { get; set; }
-        DbSet<Location> Locations { get; set; }
-        DbSet<Registration> Registrations { get; set; }
-        DbSet<Room> Rooms { get; set; }
-        DbSet<RoomType> RoomTypes { get; set; }
-        DbSet<Service> Services { get; set; }
+        public DbSet<Accommodation> Accommodations { get; set; }
+        public DbSet<AccommodationCategory> AccommodationCategories { get; set; }
+        public DbSet<Customer> Customers { get; set; }
+        public DbSet<Comment> Comments { get; set; }
+        public DbSet<CommentGroup> CommentGroups { get; set; }
+        public DbSet<Convenience> Conveniences { get; set; }
+        public DbSet<Image> Images { get; set; }
+        public DbSet<Location> Locations { get; set; }
+        public DbSet<Registration> Registrations { get; set; }
+        public DbSet<Room> Rooms { get; set; }
+        public DbSet<RoomType> RoomTypes { get; set; }
+        public DbSet<Service> Services { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            
+        }
     }
 }

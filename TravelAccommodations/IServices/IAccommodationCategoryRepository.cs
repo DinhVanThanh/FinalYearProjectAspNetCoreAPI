@@ -6,7 +6,7 @@ using TravelAccommodations.Models;
 
 namespace TravelAccommodations.IServices
 {
-    public interface AccommodationCategoryRepository : ICRUDRepository<AccommodationCategory> 
+    public interface IAccommodationCategoryRepository : ICRUDRepository<AccommodationCategory> 
     {
     }
 }

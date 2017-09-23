@@ -18,13 +18,13 @@ namespace TravelAccommodations.Models
         public int RoomTypeId { get; set; }
         [ForeignKey("RoomTypeId")]
         public RoomType Type { get; set; }
-        public RoomStatus Status { get;set }
+        public RoomStatus Status { get; set; }
         public IList<Image> Images { get; set; }
         [ForeignKey("Accommodation")]
         public int AccommodationId { get; set; }
         public Accommodation Accommodation { get; set; }
         [ForeignKey("Register")]
-        public int RegisterId { get;set }
+        public int RegisterId { get; set; }
         public Registration Register { get; set; }
     }
 }

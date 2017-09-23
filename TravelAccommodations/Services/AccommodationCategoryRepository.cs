@@ -7,41 +7,44 @@ using TravelAccommodations.Models;
 
 namespace TravelAccommodations.Services
 {
-    public class AccommodationCategoryRepository : IAccommodationRepository
+    public class AccommodationCategoryRepository : IAccommodationCategoryRepository
     {
         private TravelAccommodationDBContext _context;
         public AccommodationCategoryRepository(TravelAccommodationDBContext context)
         {
             _context = context;
         }
-        public int Create(Accommodation newObject)
+        public async Task<int> CreateAsync(AccommodationCategory newObject)
         {
-            throw new NotImplementedException();
+            _context.AccommodationCategories.Add(newObject);
+            return await _context.SaveChangesAsync();
         }
 
-        public int Delete(int ObjectId)
+        public async Task<int> DeleteAsync(int ObjectId)
         {
-            throw new NotImplementedException();
+            _context.AccommodationCategories.Remove(await getAsync(ObjectId));
+            return await _context.SaveChangesAsync();
         }
 
-        public Accommodation get(int ObjectId)
+        public async Task<ICollection<AccommodationCategory>> getAllAsync()
         {
-            throw new NotImplementedException();
+            return _context.AccommodationCategories.ToList();
         }
 
-        public Accommodation get(string ObjectName)
+        public async Task<AccommodationCategory> getAsync(int ObjectId)
         {
-            throw new NotImplementedException();
+            return _context.AccommodationCategories.SingleOrDefault(r => r.Id == ObjectId);
         }
 
-        public ICollection<Accommodation> getAll()
+        public async Task<AccommodationCategory> getAsync(string ObjectName)
         {
-            throw new NotImplementedException();
+            return _context.AccommodationCategories.SingleOrDefault(r => r.Name == ObjectName);
         }
 
-        public int Update(Accommodation updatedObject)
+        public async Task<int> UpdateAsync(AccommodationCategory updatedObject)
         {
-            throw new NotImplementedException();
+            _context.AccommodationCategories.Update(updatedObject);
+            return await _context.SaveChangesAsync();
         }
     }
 }

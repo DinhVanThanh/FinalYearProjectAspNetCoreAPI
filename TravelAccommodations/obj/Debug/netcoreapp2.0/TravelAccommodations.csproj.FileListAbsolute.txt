@@ -2,7 +2,9 @@ F:\TailieuHK7\TieuLuanTotNghiep\Project\Source\Github\Backend\TravelAccommodatio
 F:\TailieuHK7\TieuLuanTotNghiep\Project\Source\Github\Backend\TravelAccommodations\bin\Debug\netcoreapp2.0\TravelAccommodations.runtimeconfig.json
 F:\TailieuHK7\TieuLuanTotNghiep\Project\Source\Github\Backend\TravelAccommodations\bin\Debug\netcoreapp2.0\TravelAccommodations.runtimeconfig.dev.json
 F:\TailieuHK7\TieuLuanTotNghiep\Project\Source\Github\Backend\TravelAccommodations\bin\Debug\netcoreapp2.0\TravelAccommodations.dll
-F:\TailieuHK7\TieuLuanTotNghiep\Project\Source\Github\Backend\TravelAccommodations\obj\Debug\netcoreapp2.0\TravelAccommodations.csprojResolveAssemblyReference.cache
+F:\TailieuHK7\TieuLuanTotNghiep\Project\Source\Github\Backend\TravelAccommodations\bin\Debug\netcoreapp2.0\TravelAccommodations.pdb
 F:\TailieuHK7\TieuLuanTotNghiep\Project\Source\Github\Backend\TravelAccommodations\obj\Debug\netcoreapp2.0\TravelAccommodations.csproj.CoreCompileInputs.cache
 F:\TailieuHK7\TieuLuanTotNghiep\Project\Source\Github\Backend\TravelAccommodations\obj\Debug\netcoreapp2.0\TravelAccommodations.AssemblyInfoInputs.cache
 F:\TailieuHK7\TieuLuanTotNghiep\Project\Source\Github\Backend\TravelAccommodations\obj\Debug\netcoreapp2.0\TravelAccommodations.AssemblyInfo.cs
+F:\TailieuHK7\TieuLuanTotNghiep\Project\Source\Github\Backend\TravelAccommodations\obj\Debug\netcoreapp2.0\TravelAccommodations.dll
+F:\TailieuHK7\TieuLuanTotNghiep\Project\Source\Github\Backend\TravelAccommodations\obj\Debug\netcoreapp2.0\TravelAccommodations.pdb
