@@ -15,23 +15,8 @@ namespace TravelAccommodations
     {
         public static void Main(string[] args)
         {
-            var host = BuildWebHost(args);
-            host.Run();
-            using (var scope = host.Services.CreateScope())
-            {
-                var services = scope.ServiceProvider;
-
-                try
-                {
-                    // Requires using RazorPagesMovie.Models;
-                    TravelAccommodations.Models.TravelAccommodationDBContext.UpdateDatabase(services);
-                }
-                catch (Exception ex)
-                {
-                    var logger = services.GetRequiredService<ILogger<Program>>();
-                    logger.LogError(ex, "An error occurred seeding the DB.");
-                }
-            }
+            BuildWebHost(args).Run();
+            
         }
 
         public static IWebHost BuildWebHost(string[] args) =>

@@ -26,16 +26,17 @@ namespace TravelAccommodations.Models
         public DbSet<Room> Rooms { get; set; }
         public DbSet<RoomType> RoomTypes { get; set; }
         public DbSet<Service> Services { get; set; }
+        public DbSet<Nation> Nations { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
         }
 
-        public static void UpdateDatabase(IServiceProvider app)
+        public static void UpdateDatabase(IApplicationBuilder app)
         {
 
-            var context = app.GetRequiredService<TravelAccommodationDBContext>();
+            var context = app.ApplicationServices.CreateScope().ServiceProvider.GetRequiredService<TravelAccommodationDBContext>();
             context.Database.MigrateAsync();
         }
 

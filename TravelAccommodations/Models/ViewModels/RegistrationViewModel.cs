@@ -1,17 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace TravelAccommodations.Models
+namespace TravelAccommodations.Models.ViewModels
 {
-    public class Registration
+    public class RegistrationViewModel
     {
-        [Key]
-        public int Id { get; set; }
-        [ForeignKey("Customer")]
+        public int Id { get; set; } 
         public int? CustomerId { get; set; }
         public Customer Customer { get; set; }
         public IList<Room> Rooms { get; set; }

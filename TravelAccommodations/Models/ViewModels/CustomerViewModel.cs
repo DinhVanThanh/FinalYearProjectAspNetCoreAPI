@@ -1,15 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 using TravelAccommodations.Enums;
 
-namespace TravelAccommodations.Models
+namespace TravelAccommodations.Models.ViewModels
 {
-    public class Customer
+    public class CustomerViewModel
     {
-        [Key]
         public int Id { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }

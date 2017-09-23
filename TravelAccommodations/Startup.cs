@@ -69,7 +69,7 @@ namespace TravelAccommodations
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
-             
+            TravelAccommodationDBContext.UpdateDatabase(app);
             app.UseCors("AllowAllOrigins");
             app.UseStaticFiles();
             if (env.IsDevelopment())

@@ -11,6 +11,6 @@ namespace TravelAccommodations.Models
         [Key]
         public int Id { get; set; }
         public string Name { get; set; }
-        public short Rating { get; set; }
+        public short? Rating { get; set; }
     }
 }
