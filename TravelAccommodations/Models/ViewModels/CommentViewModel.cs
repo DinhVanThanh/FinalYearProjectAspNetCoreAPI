@@ -8,6 +8,7 @@ namespace TravelAccommodations.Models.ViewModels
     public class CommentViewModel
     {
         public int Id { get; set; }
+        public string Title { get; set; }
         public string Content { get; set; }
          
         public int? CommentTypeId { get; set; }
@@ -16,5 +17,6 @@ namespace TravelAccommodations.Models.ViewModels
          
         public int? CustomerId { get; set; }
         public Customer Customer { get; set; }
+        public short? Rating { get; set; }
     }
 }

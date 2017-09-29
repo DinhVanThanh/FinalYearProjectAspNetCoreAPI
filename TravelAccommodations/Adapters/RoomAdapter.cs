@@ -22,7 +22,7 @@ namespace TravelAccommodations.Adapters
                 viewModel.RegisterId = model.RegisterId;
                 viewModel.RoomTypeId = model.RoomTypeId;
                 viewModel.Status = model.Status;
-                
+                viewModel.Dimension = viewModel.Dimension;
                 return viewModel;
             }
             return null;
@@ -41,6 +41,7 @@ namespace TravelAccommodations.Adapters
                 model.RegisterId = viewModel.RegisterId;
                 model.RoomTypeId = viewModel.RoomTypeId;
                 model.Status = viewModel.Status;
+                model.Dimension = viewModel.Dimension;
                 return model;
             }
             return null;

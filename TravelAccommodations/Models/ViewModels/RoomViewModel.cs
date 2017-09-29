@@ -11,7 +11,7 @@ namespace TravelAccommodations.Models.ViewModels
         public int Id { get; set; }
         public string Price { get; set; }
         public short? Capacity { get; set; }
-        
+        public short? Dimension { get; set; }
         public int? RoomTypeId { get; set; }
          
         public RoomType Type { get; set; }

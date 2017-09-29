@@ -14,6 +14,7 @@ namespace TravelAccommodations.Models
         public int Id { get; set; }
         public string Price { get; set; }
         public short? Capacity { get; set; }
+        public short? Dimension { get; set; }
         [ForeignKey("Type")]
         public int? RoomTypeId { get; set; }
         [ForeignKey("RoomTypeId")]

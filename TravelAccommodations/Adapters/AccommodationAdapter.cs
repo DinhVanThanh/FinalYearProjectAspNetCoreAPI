@@ -25,6 +25,14 @@ namespace TravelAccommodations.Adapters
                 model.Rooms = viewModel.Rooms;
                 model.Services = viewModel.Services;
                 model.TypeId = model.TypeId;
+                model.Description = viewModel.Description;
+                model.Policies = viewModel.Policies;
+                model.LocationAssessment = viewModel.LocationAssessment;
+                model.SanitaryConditionsAssessment = viewModel.SanitaryConditionsAssessment;
+                model.ServiceAssessment = viewModel.ServiceAssessment;
+                model.RoomQualityAndComfortAssessment = viewModel.RoomQualityAndComfortAssessment;
+                model.CostAssessment = viewModel.CostAssessment;
+                model.ConvenientAssessment = viewModel.ConvenientAssessment;
                 return model;
             }
             return null;
@@ -46,6 +54,14 @@ namespace TravelAccommodations.Adapters
                 viewModel.Rooms = model.Rooms;
                 viewModel.Services = model.Services;
                 viewModel.TypeId = model.TypeId;
+                viewModel.Description = model.Description;
+                viewModel.Policies = model.Policies;
+                viewModel.LocationAssessment = model.LocationAssessment;
+                viewModel.SanitaryConditionsAssessment = model.SanitaryConditionsAssessment;
+                viewModel.ServiceAssessment = model.ServiceAssessment;
+                viewModel.RoomQualityAndComfortAssessment = model.RoomQualityAndComfortAssessment;
+                viewModel.CostAssessment = model.CostAssessment;
+                viewModel.ConvenientAssessment = model.ConvenientAssessment;
                 return viewModel;
             }
             return null;

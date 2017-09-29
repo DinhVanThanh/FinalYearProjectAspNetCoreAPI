@@ -11,6 +11,7 @@ namespace TravelAccommodations.Models
     {
         [Key]
         public int Id { get; set; }
+        public string Title { get; set; }
         public string Content { get; set; }
         [ForeignKey("Type")]
         public int? CommentTypeId { get; set; }
@@ -19,5 +20,6 @@ namespace TravelAccommodations.Models
         [ForeignKey("Customer")]
         public int? CustomerId { get; set; }
         public Customer Customer { get; set; }
+        public short? Rating { get; set; }
     }
 }

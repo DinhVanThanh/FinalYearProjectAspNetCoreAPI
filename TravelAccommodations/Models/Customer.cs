@@ -19,7 +19,7 @@ namespace TravelAccommodations.Models
         public string Address { get; set; }
         public string Email { get; set; }
         public string IdentityNumber { get; set; }
-        public string Nation { get; set; }
+        public Nation Nation { get; set; }
 
         public IList<Comment> Comments { get; set; }
     }
