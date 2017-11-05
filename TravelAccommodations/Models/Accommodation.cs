@@ -18,9 +18,7 @@ namespace TravelAccommodations.Models
         public Location Position { get; set; }
         public string AveragePrice { get; set; }
         public short? Rating { get; set; }
-        [ForeignKey("Type")]
-        public int? TypeId { get; set; }
-        public AccommodationCategory Type { get; set; }
+        
         public IList<Image> Images { get; set; } 
         public IList<Service> Services { get; set; }
         public IList<Convenience> Conveniences { get; set; }
@@ -33,5 +31,9 @@ namespace TravelAccommodations.Models
         public short? ConvenientAssessment { get; set; }
         public short? RoomQualityAndComfortAssessment { get; set; }
         public short? CostAssessment { get; set; }
+        [ForeignKey("Vendor")]
+        public int? VendorId { get; set; }
+
+        public Vendor Vendor { get; set; }
     }
 }

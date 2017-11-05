@@ -15,8 +15,7 @@ namespace TravelAccommodations.Models.ViewModels
         public Location Position { get; set; }
         public string AveragePrice { get; set; }
         public short? Rating { get; set; } 
-        public int? TypeId { get; set; }
-        public AccommodationCategory Type { get; set; }
+        public int? TypeId { get; set; } 
         public IList<Image> Images { get; set; }
         public IList<Service> Services { get; set; }
         public IList<Convenience> Conveniences { get; set; }

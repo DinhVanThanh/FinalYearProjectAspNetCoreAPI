@@ -22,8 +22,7 @@ namespace TravelAccommodations.Adapters
                 viewModel.FirstName = model.FirstName;
                 viewModel.Gender = model.Gender;
                 viewModel.IdentityNumber = model.IdentityNumber;
-                viewModel.LastName = model.LastName;
-                viewModel.Nation = model.Nation;
+                viewModel.LastName = model.LastName; 
                 viewModel.PhoneNumber = model.PhoneNumber;
                 
                 return viewModel;
@@ -43,8 +42,7 @@ namespace TravelAccommodations.Adapters
                 model.FirstName = viewModel.FirstName;
                 model.Gender = viewModel.Gender;
                 model.IdentityNumber = viewModel.IdentityNumber;
-                model.LastName = viewModel.LastName;
-                model.Nation = viewModel.Nation;
+                model.LastName = viewModel.LastName; 
                 model.PhoneNumber = viewModel.PhoneNumber;
                 return model;
             }

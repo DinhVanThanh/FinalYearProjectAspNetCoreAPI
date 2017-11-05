@@ -23,8 +23,7 @@ namespace TravelAccommodations.Adapters
                 model.Name = viewModel.Name;
                 model.Rating = viewModel.Rating;
                 model.Rooms = viewModel.Rooms;
-                model.Services = viewModel.Services;
-                model.TypeId = model.TypeId;
+                model.Services = viewModel.Services; 
                 model.Description = viewModel.Description;
                 model.Policies = viewModel.Policies;
                 model.LocationAssessment = viewModel.LocationAssessment;
@@ -52,8 +51,7 @@ namespace TravelAccommodations.Adapters
                 viewModel.Name = model.Name;
                 viewModel.Rating = model.Rating;
                 viewModel.Rooms = model.Rooms;
-                viewModel.Services = model.Services;
-                viewModel.TypeId = model.TypeId;
+                viewModel.Services = model.Services; 
                 viewModel.Description = model.Description;
                 viewModel.Policies = model.Policies;
                 viewModel.LocationAssessment = model.LocationAssessment;

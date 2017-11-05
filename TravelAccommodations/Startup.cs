@@ -47,10 +47,8 @@ namespace TravelAccommodations
             services.AddScoped<ICustomerRepository, CustomerRepository>();
             services.AddScoped<IConvenienceRepository, ConvenienceRepository>();
             services.AddScoped<ICommentRepository, CommentRepository>();
-            services.AddScoped<ICommentGroupRepository, CommentGroupRepository>();
-            services.AddScoped<IAccommodationCategoryRepository, AccommodationCategoryRepository>();
-            services.AddScoped<IAccommodationRepository, AccommodationRepository>();
-            services.AddScoped<INationRepository, NationRepository>();
+            services.AddScoped<ICommentGroupRepository, CommentGroupRepository>(); 
+            services.AddScoped<IAccommodationRepository, AccommodationRepository>(); 
             services.AddScoped<IPolicyRepository, PolicyRepository>();
 
             services.AddCors(options =>

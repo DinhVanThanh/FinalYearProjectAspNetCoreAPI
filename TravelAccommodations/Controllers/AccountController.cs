@@ -3,26 +3,26 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using TravelAccommodations.Models;
+
+// For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace TravelAccommodations.Controllers
 {
-    [Produces("application/json")]
     [Route("api/[controller]")]
-    public class ValuesController : Controller
+    public class AccountController : Controller
     {
-        // GET api/values
-        [HttpGet("getAllLocation")]
-        public IEnumerable<Location> Get()
+        // GET: api/values
+        [HttpGet]
+        public IEnumerable<string> Get()
         {
-            return new List<Location>(){ new Location() {  }};
+            return new string[] { "value1", "value2" };
         }
 
         // GET api/values/5
-        [HttpGet]
-        public Location Get([FromQuery]int id)
+        [HttpGet("{id}")]
+        public string Get(int id)
         {
-            return new Location() {};
+            return "value";
         }
 
         // POST api/values

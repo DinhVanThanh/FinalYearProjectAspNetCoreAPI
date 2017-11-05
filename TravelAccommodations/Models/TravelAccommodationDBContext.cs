@@ -14,8 +14,7 @@ namespace TravelAccommodations.Models
         public TravelAccommodationDBContext(DbContextOptions<TravelAccommodationDBContext> options) : base(options)
         {
         }
-        public DbSet<Accommodation> Accommodations { get; set; }
-        public DbSet<AccommodationCategory> AccommodationCategories { get; set; }
+        public DbSet<Accommodation> Accommodations { get; set; } 
         public DbSet<Customer> Customers { get; set; }
         public DbSet<Comment> Comments { get; set; }
         public DbSet<CommentGroup> CommentGroups { get; set; }
@@ -26,8 +25,9 @@ namespace TravelAccommodations.Models
         public DbSet<Room> Rooms { get; set; }
         public DbSet<RoomType> RoomTypes { get; set; }
         public DbSet<Service> Services { get; set; }
-        public DbSet<Nation> Nations { get; set; }
+        public DbSet<Vendor> Vendors { get; set; }
         public DbSet<Policy> Policies { get; set; }
+        public DbSet<Account> Accounts { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
